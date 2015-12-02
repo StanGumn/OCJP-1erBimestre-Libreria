@@ -24,7 +24,7 @@ public class MainBiblioteca {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int opcion=-1,searchRecurso =0;
+        int opcion=-1,searchRecurso =0, aux=0;
         String libroSearch="", dvdSearch="", revistaSearch="", periodicoSearch="";
         Scanner scanner = new Scanner(System.in);
         
@@ -32,7 +32,7 @@ public class MainBiblioteca {
         recursos = new Recurso[8];
         recursos[0] = new Libro("Juego de Tronos", "George R. R. Martin", true, 500);
         recursos[1] = new Revista("Vistazo", "Ecuavisa", true, "Segunda");
-        recursos[2] = new Dvd("saew", "Little Jhony", true, 25);
+        recursos[2] = new Dvd("tesis saew", "Little Jhony", true, 25);
         recursos[3] = new Periodico("El Comercio", "Grupo El Comercio", true, "Quinta");        
         recursos[4] = new Libro("OCJP", "Carlos Anchundia", true, 300);
         recursos[5] = new Revista("Pandilla", "Grupo El Comercio", true, "Tercera");
@@ -67,44 +67,71 @@ public class MainBiblioteca {
                     switch(searchRecurso){
                         case 1:
                             libroSearch=JOptionPane.showInputDialog(null,"Ingresa el nombre del Libro que deseas buscar");
-                            for (int i=0;i<recursos.length;i++){
+                            for (int i=0;i<recursos.length ;i++){
                                 if (libroSearch.equals(recursos[i].getNombre())){
                                     JOptionPane.showMessageDialog(null,recursos[i].toString());
+                                    aux=1;
                                     break;
                                 } 
+                            }
+                            
+                            if (aux!=1){
+                                JOptionPane.showMessageDialog(null,"El Libro no se encuentra en la Biblioteca");
                                 
                             }
+                            aux=0;
                             break;
                         case 2:
                             dvdSearch=JOptionPane.showInputDialog(null,"Ingresa el nombre del DVD que deseas buscar");
                             for (int i=0;i<recursos.length;i++){
                                 if (dvdSearch.equals(recursos[i].getNombre())){
                                     JOptionPane.showMessageDialog(null,recursos[i].toString());
+                                    aux=1;
                                     break;
-                                } 
+                                }   
+                            }
+                            
+                            if (aux!=1){
+                                JOptionPane.showMessageDialog(null,"El DVD no se encuentra en la Biblioteca");
                                 
                             }
+                            aux=0;
                             break;
+                            
                         case 3:
                             revistaSearch=JOptionPane.showInputDialog(null,"Ingresa el nombre de la REVISTA que deseas buscar");
                             for (int i=0;i<recursos.length;i++){
                                 if (revistaSearch.equals(recursos[i].getNombre())){
                                     JOptionPane.showMessageDialog(null,recursos[i].toString());
+                                    aux=1;
                                     break;
                                 } 
                                 
                             }
+                            
+                            if (aux!=1){
+                                JOptionPane.showMessageDialog(null,"La Revista no se encuentra en la Biblioteca");
+                               
+                            }
+                            aux=0;
                             break;
                         case 4:
                             periodicoSearch=JOptionPane.showInputDialog(null,"Ingresa el nombre del PERIODICO que deseas buscar");
                             for (int i=0;i<recursos.length;i++){
                                 if (periodicoSearch.equals(recursos[i].getNombre())){
                                     JOptionPane.showMessageDialog(null,recursos[i].toString());
+                                    aux=1;
                                     break;
                                 } 
                                 
                             }
-                            break;
+                            
+                            if (aux!=1){
+                                JOptionPane.showMessageDialog(null,"El Periodico no se encuentra en la Biblioteca");
+                                
+                            }
+                            aux=0;
+                            break;  
                     }
                     
                     break;
