@@ -7,16 +7,7 @@ import biblioteca.Revista;
 import java.util.Scanner;
 import usuarios.*;
 import javax.swing.JOptionPane;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author USRBDD
- */
 public class MainBiblioteca {
 
     /**
@@ -25,7 +16,7 @@ public class MainBiblioteca {
     public static void main(String[] args) {
         // TODO code application logic here
         int opcion=-1,searchRecurso =0, aux=0;
-        String libroSearch="", dvdSearch="", revistaSearch="", periodicoSearch="";
+        String libroSearch="", dvdSearch="", revistaSearch="", periodicoSearch="",searchCliente="";
         Scanner scanner = new Scanner(System.in);
         
         Recurso[] recursos;
@@ -53,7 +44,8 @@ public class MainBiblioteca {
         }*/
         do{
             opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"Elige opción:\n1.- Buscar Recursos" +
-				"\n2.- Ver Datos de los clientes" +
+				"\n2.- Buscar clientes" +
+                                "\n3.- Asignar recursos a clientes" +
 				"\n0.- Salir"));
             //opcion=JOptionPane.showInputDialog(null, scannerpcion);
             //opcion= Integer.parseInt(scanner.nextLine());
@@ -135,14 +127,29 @@ public class MainBiblioteca {
                     }
                     
                     break;
-                case 2:
+                    
+                case 2: //buscar clientes
+                    searchCliente=JOptionPane.showInputDialog(null,"Ingrese el numero de cedula del cliente");
+                    for (int i=0; i<clientes.length;i++){                      
+                        if (searchCliente.equals(clientes[i].getCedula())){
+                            JOptionPane.showMessageDialog(null,clientes[i].toString());
+                            aux=1;
+                        }
+                        break;
+                    }
+                    if (aux!=1){
+                        JOptionPane.showMessageDialog(null,"El Cliente no existe");      
+                    }
+                    aux=0;
                     break;
                     
+                case 3: //asignar
+                    
+                    break;
+   
             }
         }while (opcion!=0);
-        
-        
-     
+
     }
     
 }

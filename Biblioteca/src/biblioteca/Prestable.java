@@ -5,10 +5,6 @@
  */
 package biblioteca;
 
-/**
- * Disponible/prestable
- * @author USRBDD
- */
 public interface Prestable {
     
     public boolean isPrestable();

@@ -5,10 +5,6 @@
  */
 package biblioteca;
 
-/**
- *
- * @author USRBDD
- */
 public class Periodico extends Recurso{
 
     private String edicion;

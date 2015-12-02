@@ -6,10 +6,6 @@
 package usuarios;
 import biblioteca.*;
 
-/**
- *
- * @author stand
- */
 public class Cliente {
     private String nombre;
     private String cedula;
@@ -29,10 +25,7 @@ public class Cliente {
     }
     
     public String toString(){
-        System.out.println("%%---------------- CLIENTE ----------------%%");
-	System.out.println("NOMBRE: " + this.nombre);
-	System.out.println("CEDULA: " + this.cedula);
-        
-        return "-------------------------------------------\n\n";
+             
+        return "%%---------------- CLIENTE ----------------%%\nNombre: "+this.nombre+"\nCedula: "+this.cedula+"\n-------------------------------------------\n\n";
     }
 }

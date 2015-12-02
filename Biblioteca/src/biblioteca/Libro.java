@@ -5,10 +5,6 @@
  */
 package biblioteca;
 
-/**
- *
- * @author USRBDD
- */
 public class Libro extends Recurso{
 
     private int numeroDePaginas;
@@ -27,6 +23,5 @@ public class Libro extends Recurso{
        // System.out.println("------- Libro -------\n");
         return "--------- Libro ---------\n"+super.toString()+"Nunero de Paginas: "+this.numeroDePaginas+"\n";
     }
-    
-    
+
 }

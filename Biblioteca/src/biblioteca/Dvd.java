@@ -5,10 +5,7 @@
  */
 package biblioteca;
 
-/**
- *
- * @author USRBDD
- */
+
 public class Dvd extends Recurso{
 
     private int capacidad;

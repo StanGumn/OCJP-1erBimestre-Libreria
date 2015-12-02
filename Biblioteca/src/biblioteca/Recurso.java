@@ -5,10 +5,6 @@
  */
 package biblioteca;
 
-/**
- *
- * @author USRBDD
- */
 public abstract class Recurso implements Prestable{
     
     private String nombre;
