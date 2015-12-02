@@ -20,5 +20,20 @@ public abstract class Recurso implements Prestable{
         this.autor = autor;
         this.estado = estado;
     }
+    
+    public String getNombre(){
+        return this.nombre;
+    }
+    
+    public String getAutor(){
+        return this.autor;
+    }
+    public boolean getEstado(){
+        return this.estado;
+    }
+    
+    public String toString(){
+        return "Nombre del Recurso: "+this.nombre+"\nAutor: "+this.autor+"\n";
+    }
            
 }

@@ -23,5 +23,10 @@ public class Libro extends Recurso{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public String toString(){
+        System.out.println("------- Libro -------");
+        return super.toString()+"Nunero de Paginas: "+this.numeroDePaginas+"\n";
+    }
+    
     
 }

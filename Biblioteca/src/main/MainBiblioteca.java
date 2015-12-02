@@ -1,9 +1,10 @@
-
+package main;
 import biblioteca.Dvd;
 import biblioteca.Libro;
 import biblioteca.Periodico;
 import biblioteca.Recurso;
 import biblioteca.Revista;
+import usuarios.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -24,13 +25,18 @@ public class MainBiblioteca {
         // TODO code application logic here
         Recurso[] recursos;
         recursos = new Recurso[4];
-        recursos[1] = new Libro("Maria", "Jose", true, 50);
-        recursos[2] = new Revista("Vistazo", "Pedro", true, "Segunda");
-        recursos[3] = new Dvd("Tesis", "Yolanda", true, 25);
-        recursos[4] = new Periodico("El Comercio", "DRA", true, "Quinta");
+        recursos[0] = new Libro("Maria", "Jose", true, 50);
+        recursos[1] = new Revista("Vistazo", "Pedro", true, "Segunda");
+        recursos[2] = new Dvd("Tesis", "Yolanda", true, 25);
+        recursos[3] = new Periodico("El Comercio", "DRA", true, "Quinta");        
         
+        Cliente[] clientes;
         
+        for (int i=0; i<recursos.length; i++){
+            System.out.println(recursos[i]);
+        }
         
+     
     }
     
 }

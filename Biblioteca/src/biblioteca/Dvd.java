@@ -23,4 +23,8 @@ public class Dvd extends Recurso{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public String toString(){
+        System.out.println("------- DVD -------");
+        return super.toString()+"Capacidad: "+this.capacidad+"\n";
+    }
 }

@@ -20,7 +20,12 @@ public class Periodico extends Recurso{
     
     @Override
     public boolean isPrestable() {
-        return false;
+        //return false;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public String toString(){
+        System.out.println("------- Periodico -------");
+        return super.toString()+"Edicion: "+this.edicion+"\n";
+    }
 }
