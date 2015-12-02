@@ -24,7 +24,6 @@ public class Dvd extends Recurso{
     }
     
     public String toString(){
-        System.out.println("------- DVD -------");
-        return super.toString()+"Capacidad: "+this.capacidad+"\n";
+        return "--------- DVD ---------\n"+super.toString()+"Capacidad: "+this.capacidad+"\n";
     }
 }

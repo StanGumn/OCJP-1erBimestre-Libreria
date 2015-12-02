@@ -24,8 +24,8 @@ public class Revista extends Recurso{
     }
     
     public String toString(){
-        System.out.println("------- Revista -------");
-        return super.toString()+"Edicion: "+this.edicion+"\n";
+
+        return "------- Revista -------\n"+super.toString()+"Edicion: "+this.edicion+"\n";
     }
     
 }

@@ -24,8 +24,8 @@ public class Libro extends Recurso{
     }
     
     public String toString(){
-        System.out.println("------- Libro -------");
-        return super.toString()+"Nunero de Paginas: "+this.numeroDePaginas+"\n";
+       // System.out.println("------- Libro -------\n");
+        return "--------- Libro ---------\n"+super.toString()+"Nunero de Paginas: "+this.numeroDePaginas+"\n";
     }
     
     

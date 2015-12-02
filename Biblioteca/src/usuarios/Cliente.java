@@ -12,14 +12,27 @@ import biblioteca.*;
  */
 public class Cliente {
     private String nombre;
-    private String Cedula;
+    private String cedula;
     private Recurso[] recursos;
     
+    public Cliente(String nombre, String cedula){
+        this.nombre=nombre;
+        this.cedula=cedula;
+    }
+    
+    public String getNombre(){
+        return this.nombre;
+    }
+    
+    public String getCedula(){
+        return this.cedula;
+    }
+    
     public String toString(){
-        System.out.println("%%--Calificaciones--%%");
+        System.out.println("%%---------------- CLIENTE ----------------%%");
 	System.out.println("NOMBRE: " + this.nombre);
-	System.out.println("CEDULA: " + this.Cedula);
+	System.out.println("CEDULA: " + this.cedula);
         
-        return "-----------";
+        return "-------------------------------------------\n\n";
     }
 }

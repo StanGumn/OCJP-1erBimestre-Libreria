@@ -25,7 +25,6 @@ public class Periodico extends Recurso{
     }
     
     public String toString(){
-        System.out.println("------- Periodico -------");
-        return super.toString()+"Edicion: "+this.edicion+"\n";
+        return "--------- Periodico ---------\n"+super.toString()+"Edicion: "+this.edicion+"\n";
     }
 }
